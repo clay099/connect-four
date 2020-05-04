@@ -1,0 +1,167 @@
+/* ================================================== */
+/* =====general styling==== */
+#game-container {
+    display: flex;
+}
+
+/* page background */
+body {
+    background-image: url("https://images.unsplash.com/photo-1531824475211-72594993ce2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    background-color: blue;
+}
+
+/* style items position relative to eachother */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* set board outline and background color */
+#board {
+    border: black 3px solid;
+    background-color: yellow;
+}
+
+/* set the cells style */
+#board td {
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+/* background color of unfilled circles */
+tr {
+    background-color: white;
+}
+
+/* column-top is table row of clickable areas for each column */
+#column-top td {
+    border: dashed 4px blue;
+}
+
+/* ================================================== */
+
+/* =====turn indicator styling===== */
+/* position on board */
+.turn-indicator {
+    margin-top: 100px;
+    margin: 100px 20px;
+}
+
+/* text in center */
+.player-number {
+    text-align: center;
+}
+
+/* style of piece tracker (right & left of board) */
+.piece-tracker {
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 15px rgba(0, 0, 0, 085);
+}
+
+/* set player colors */
+#one {
+    background-color: black;
+}
+
+#two {
+    background-color: red;
+}
+
+/* set player2 to start with limited opacity */
+#player2 {
+    opacity: 0.3;
+}
+
+/* ================================================== */
+/* =====new-game row styling===== */
+#new-game {
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+    font-weight: 700;
+    border-radius: 25px;
+}
+
+/* styling for hover */
+#new-game:hover {
+    border: 0;
+    background: ye;
+    cursor: pointer;
+    color: #240b36;
+    outline: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+    text-shadow: 2px 1px 2px black;
+    color: yellow;
+}
+
+/* ================================================== */
+/* =====game piece styling===== */
+/* p1 is blue */
+.p1 {
+    background-color: black;
+}
+
+/* p2 is red */
+.p2 {
+    background-color: red;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+.piece {
+    margin: 3px;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    animation: slide-in-top 1s;
+    box-shadow: inset -3px -3px 15px rgba(0, 0, 0, 085);
+    position: relative;
+}
+
+/* anamation to make it look like piece is dropped in*/
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-0px);
+        transform: translateY(-250px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* ================================================== */
+/* =====top row piece styling (when mouse hovers)===== */
+
+.column-top-p1 td:hover {
+    background-color: black;
+    margin: 3px;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 15px rgba(0, 0, 0, 085);
+}
+.column-top-p2 td:hover {
+    background-color: red;
+    margin: 3px;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 15px rgba(0, 0, 0, 085);
+}
+
+/* original hover effect updated above*/
+/* #column-top td:hover {
+    background-color: gold;
+} */
