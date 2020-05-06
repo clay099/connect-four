@@ -1,44 +1,40 @@
-<!doctype html>
-<head>
-  <title>Connect 4</title>
-  <link href="connect4.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Connect 4</title>
+        <link href="connect4.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>CONNECT FOUR</h1>
 
-</head>
-<body>
+        <div class="container">
+            <table>
+                <tr>
+                    <td id="new-game">New Game</td>
+                </tr>
+            </table>
+        </div>
 
-    <h1>CONNECT FOUR</h1>
-
-    <div class="container">
-        <table>
-            <tr>
-                <td id="new-game">New Game</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="container">
-
-        <div id="game-container">
-            <div class="turn-indicator" id="player1"> 
-                <h2 class="player-title">Player</h2>
-                <div class="player-number">
-                    <h2 id="one" class="piece-tracker">1</h2>
+        <div class="container">
+            <div id="game-container">
+                <div class="turn-indicator" id="player1">
+                    <h2 class="player-title">Player</h2>
+                    <div class="player-number">
+                        <h2 id="one" class="piece-tracker">1</h2>
+                    </div>
+                </div>
+                <div id="game">
+                    <table id="board"></table>
+                </div>
+                <div class="turn-indicator" id="player2">
+                    <h2 class="player-title">Player</h2>
+                    <div class="player-number">
+                        <h2 id="two" class="piece-tracker">2</h2>
+                    </div>
                 </div>
             </div>
-            <div id="game">
-                <table id="board"></table>
-            </div>
-            <div class="turn-indicator" id="player2"> 
-                <h2 class="player-title">Player</h2>
-                <div class="player-number">
-                    <h2 id="two" class="piece-tracker">2</h2>
-                </div>
-            </div>
-        </div>        
-    </div>
+        </div>
 
-
-<script src="connect4.js"></script>
-
-</body>
+        <script src="connect4.js"></script>
+    </body>
 </html>

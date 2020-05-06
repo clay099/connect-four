@@ -8,7 +8,6 @@
 body {
     background-image: url("https://images.unsplash.com/photo-1531824475211-72594993ce2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
     background-size: cover;
-    background-color: blue;
 }
 
 /* style items position relative to eachother */
@@ -93,7 +92,6 @@ tr {
 /* styling for hover */
 #new-game:hover {
     border: 0;
-    background: ye;
     cursor: pointer;
     color: #240b36;
     outline: none;
@@ -110,7 +108,7 @@ h1 {
 /* =====game piece styling===== */
 /* p1 is blue */
 .p1 {
-    background-color: black;
+    background-color: #4e4b4b;
 }
 
 /* p2 is red */
@@ -145,7 +143,7 @@ h1 {
 /* =====top row piece styling (when mouse hovers)===== */
 
 .column-top-p1 td:hover {
-    background-color: black;
+    background-color: #4e4b4b;
     margin: 3px;
     width: 90%;
     height: 90%;
