@@ -35,9 +35,7 @@ function newGame() {
     headerPlayer.addEventListener("click", handleClick);
 
     // add new class to top row which will change to be the current player class
-    headerPlayer.classList.add(
-        currPlayer === 1 ? "column-top-p1" : "column-top-p2"
-    );
+    headerPlayer.classList.add(currPlayer === 1 ? "column-top-p1" : "column-top-p2");
 }
 
 /** makeHtmlBoard: make HTML table and row of column tops. */
@@ -122,8 +120,7 @@ function handleClick(evt) {
     // check for tie
     // as the handleClick event is within the makeHtmlBoard funciton we have access to row and cell.
     // check that the board has every row and that every row has a cell
-    if (board.every((row) => row.every((cell) => cell)))
-        return endGame(`The game is a tie`);
+    if (board.every((row) => row.every((cell) => cell))) return endGame(`The game is a tie`);
 
     // switch players
     currPlayer = currPlayer === 1 ? 2 : 1;
@@ -144,12 +141,7 @@ function checkForWin() {
         //  - returns true if all are legal coordinates & all match currPlayer
 
         return cells.every(
-            ([y, x]) =>
-                y >= 0 &&
-                y < HEIGHT &&
-                x >= 0 &&
-                x < WIDTH &&
-                board[y][x] === currPlayer
+            ([y, x]) => y >= 0 && y < HEIGHT && x >= 0 && x < WIDTH && board[y][x] === currPlayer
         );
     }
 
@@ -192,7 +184,6 @@ function checkForWin() {
 
 // create new game logic
 newGameBtn.addEventListener("click", function (e) {
-    // e.preventDefault();
     board.length = 0;
     htmlBoard.innerHTML = "";
     currPlayer = 1;
